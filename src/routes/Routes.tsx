@@ -1,6 +1,14 @@
+import ForgotPassword from "@/components/Home/ForgetPassword";
 import { Home } from "@/components/Home/Home";
-import Main from "@/components/layout/Main";
+import Login from "@/components/Home/Login";
+
+import Signup from "@/components/Home/Signup";
+import AdminLayout from "@/layout/AdminLayout";
+import Main from "@/layout/Main";
+import UserLayout from "@/layout/UserLayout";
+import AdminDashboard from "@/pages/Admin/AdminDashboardPage";
 import AboutUsPage from "@/pages/Home/AboutUsPage";
+import Dashboard from "@/pages/User/Dashboard";
 import { createBrowserRouter } from "react-router-dom";
 
 export const router = createBrowserRouter([
@@ -16,6 +24,40 @@ export const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutUsPage />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/signup",
+        element: <Signup />,
+      },
+      {
+        path: "/forgot-password",
+        element: <ForgotPassword />,
+      },
+    ],
+  },
+  /* User Layout */
+  {
+    path: "user",
+    element: <UserLayout></UserLayout> /*  <PrivateRoute> </PrivateRoute> */,
+    children: [
+      {
+        path: "userhome",
+        element: <Dashboard></Dashboard>,
+      },
+    ],
+  },
+  /* Admin Layout */
+  {
+    path: "admin",
+    element: <AdminLayout></AdminLayout> /*  <PrivateRoute> </PrivateRoute> */,
+    children: [
+      {
+        path: "admindashboard",
+        element: <AdminDashboard></AdminDashboard>,
       },
     ],
   },

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import logo from "../../../assets/icons/logo.png";
+
 interface NavItem {
   title: string;
   href: string;
@@ -33,7 +35,7 @@ const NavBar: React.FC = () => {
     <nav className="bg-gray-800 text-white p-4 flex justify-between items-center">
       {/* Left Side: Logo */}
       <div className="flex items-center space-x-4">
-        <img src="/logo.png" alt="Logo" className="h-8" />
+        <img src={logo} alt="Logo" className="h-12 w-12" />
       </div>
 
       {/* Center: Navigation Links */}
@@ -52,6 +54,18 @@ const NavBar: React.FC = () => {
         />
         <Link to="/cart" className="text-white hover:text-gray-300">
           <i className="fas fa-shopping-cart"></i> Cart
+        </Link>
+        <Link to="/user" className="text-white hover:text-gray-300">
+          <i className="fas fa-shopping-cart"></i> User
+        </Link>
+        <Link to="/admin" className="text-white hover:text-gray-300">
+          <i className="fas fa-shopping-cart"></i> Admin
+        </Link>
+        <Link
+          to="/signup"
+          className="text-white hover:text-gray-300 px-4 py-2 rounded-md border border-white"
+        >
+          Signup
         </Link>
         <Link
           to="/login"
