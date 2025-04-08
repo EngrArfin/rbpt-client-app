@@ -10,7 +10,7 @@ export default function AdminDashboard() {
       <UserHeader />
       <div className="flex min-h-screen">
         <DashboardSidebar />
-        <main className="flex-1 mr-12">
+        <main className="flex-1 mr-12 overflow-auto">
           <DashboardContent />
         </main>
       </div>

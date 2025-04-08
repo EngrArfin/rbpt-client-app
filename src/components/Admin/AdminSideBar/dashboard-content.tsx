@@ -48,54 +48,62 @@ const appointments = [
 
 export function DashboardContent() {
   return (
-    <div className="p-6">
-      <h1 className="mb-6 text-xl font-semibold">Overview</h1>
+    <div className="p-4 sm:p-6">
+      <h1 className="mb-6 text-2xl font-bold text-gray-800">
+        Dashboard Overview
+      </h1>
 
-      <div className="mb-8 grid grid-cols-3 gap-6">
-        <div className="rounded-lg bg-[#1B8D1B] p-6 text-white">
-          <div className="text-5xl font-bold">04</div>
-          <p className="mt-2 text-sm">Recent Appointment List</p>
+      <div className="mb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="rounded-2xl bg-green-600 p-6 text-white shadow-md">
+          <div className="text-4xl font-bold">04</div>
+          <p className="mt-2 text-sm opacity-90">Recent Appointments</p>
         </div>
-        <div className="rounded-lg bg-green-50 p-6 text-[#1B8D1B]">
-          <div className="text-5xl font-bold">02</div>
-          <p className="mt-2 text-sm">Running Appointment List</p>
+        <div className="rounded-2xl bg-green-100 p-6 text-green-800 shadow-md">
+          <div className="text-4xl font-bold">02</div>
+          <p className="mt-2 text-sm">Running Appointments</p>
         </div>
-        <div className="rounded-lg bg-green-50 p-6 text-[#1B8D1B]">
-          <div className="text-5xl font-bold">33</div>
-          <p className="mt-2 text-sm">Completed Appointment List</p>
+        <div className="rounded-2xl bg-green-50 p-6 text-green-700 shadow-md">
+          <div className="text-4xl font-bold">33</div>
+          <p className="mt-2 text-sm">Completed Appointments</p>
         </div>
       </div>
 
-      <div className="rounded-lg border">
+      <div className="rounded-2xl border bg-white overflow-x-auto shadow-sm">
         <Table>
-          <TableHeader className="w-[894px] h-[74px] bg-green-500 text-white rounded-lg px-[24px] pr-[34px] pb-[24px] gap-[24px]">
-            <TableRow className=" ">
-              <TableHead>No</TableHead>
-              <TableHead>Service</TableHead>
-              <TableHead>Consumer Name</TableHead>
-              <TableHead>Location</TableHead>
-              <TableHead>Action</TableHead>
+          <TableHeader className="bg-green-500 text-white">
+            <TableRow>
+              <TableHead className="text-white px-6 py-4">No</TableHead>
+              <TableHead className="text-white px-6 py-4">Service</TableHead>
+              <TableHead className="text-white px-6 py-4">
+                Consumer Name
+              </TableHead>
+              <TableHead className="text-white px-6 py-4">Location</TableHead>
+              <TableHead className="text-white px-6 py-4">Status</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {appointments.map((appointment) => (
-              <TableRow key={appointment.id}>
-                <TableCell>{appointment.id}</TableCell>
-                <TableCell>{appointment.service}</TableCell>
-                <TableCell>{appointment.consumer}</TableCell>
-                <TableCell className="max-w-[300px] truncate">
+              <TableRow key={appointment.id} className="hover:bg-gray-50">
+                <TableCell className="px-6 py-4">{appointment.id}</TableCell>
+                <TableCell className="px-6 py-4">
+                  {appointment.service}
+                </TableCell>
+                <TableCell className="px-6 py-4">
+                  {appointment.consumer}
+                </TableCell>
+                <TableCell className="px-6 py-4 max-w-xs truncate">
                   {appointment.location}
                 </TableCell>
-                <TableCell>
+                <TableCell className="px-6 py-4">
                   <span
                     className={cn(
-                      "inline-block rounded-full px-3 py-1 text-xs font-medium",
+                      "inline-block rounded-full px-3 py-1 text-xs font-semibold",
                       {
-                        "bg-yellow-100 text-yellow-800":
+                        "bg-yellow-200 text-yellow-800":
                           appointment.status === "Pending",
-                        "bg-blue-100 text-blue-800":
+                        "bg-blue-200 text-blue-800":
                           appointment.status === "Waiting",
-                        "bg-green-100 text-green-800":
+                        "bg-green-200 text-green-800":
                           appointment.status === "Completed",
                       }
                     )}

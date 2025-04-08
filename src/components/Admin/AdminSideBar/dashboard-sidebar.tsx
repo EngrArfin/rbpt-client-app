@@ -1,5 +1,3 @@
-import type React from "react";
-
 import {
   BarChart3,
   Calendar,
@@ -62,20 +60,6 @@ const navItems: NavItem[] = [
 export function DashboardSidebar() {
   return (
     <aside className="flex w-96 flex-col border-r bg-white px-12">
-      {/* <div className="flex flex-col items-center border-y py-6">
-        <div className="relative h-20 w-20 overflow-hidden rounded-full">
-          <img
-            src="https://lh3.googleusercontent.com/a/ACg8ocJYO2z0aV3cT15IeV9_txuD04rcmJOVffuQD2WhH9OHs75WOyk=s288-c-no"
-            alt="Profile picture"
-            width={80}
-            height={80}
-            className="object-cover"
-          />
-        </div>
-        <h2 className="mt-4 font-semibold">EMMANUEL NONYE</h2>
-        <p className="text-sm text-[#1B8D1B]">Developer (Certified)</p>
-      </div> */}
-
       <nav className="flex-1 space-y-1 p-4">
         {navItems.map((item) => (
           <Link
