@@ -6,13 +6,13 @@ export function DashboardHeader() {
   return (
     <header className="flex justify-between items-center h-16 gap-4 border-b px-6">
       <div className="p-6">
-        <img
+        {/* <img
           src="https://energhx.com/wp-content/uploads/2022/09/logo.png"
           alt="ENERGHX"
           width={120}
           height={40}
           className="dark:invert"
-        />
+        /> */}
       </div>
 
       <div className="flex items-center justify-endh-16 gap-4  px-6">
