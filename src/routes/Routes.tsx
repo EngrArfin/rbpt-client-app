@@ -1,3 +1,4 @@
+import { DashboardContent } from "@/components/Admin/AdminSideBar/dashboard-content";
 import ForgotPassword from "@/components/Home/ForgetPassword";
 import { Home } from "@/components/Home/Home";
 import Login from "@/components/Home/Login";
@@ -56,8 +57,12 @@ export const router = createBrowserRouter([
     element: <AdminLayout></AdminLayout> /*  <PrivateRoute> </PrivateRoute> */,
     children: [
       {
+        index: true,
+        element: <DashboardContent></DashboardContent>,
+      },
+      {
         path: "admindashboard",
-        element: <AdminDashboard></AdminDashboard>,
+        element: <DashboardContent></DashboardContent>,
       },
     ],
   },
