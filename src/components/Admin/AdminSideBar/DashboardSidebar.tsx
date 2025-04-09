@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import { Calendar, Home, Inbox, LogOut, Search, Settings } from "lucide-react";
 
 import {
   Sidebar,
@@ -38,9 +38,14 @@ const items = [
     url: "#",
     icon: Settings,
   },
+  {
+    title: "Logout",
+    url: "logout",
+    icon: LogOut,
+  },
 ];
 
-export function DashboardSidebar() {
+export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>

@@ -4,6 +4,29 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+  --color-primary: #6b7280;
+  --color-dashboardbg: #1a233a;
+  --color-dashboardsecondary: #272e48;
+  --color-buttonhovercolor: #212429;
+  --color-bghovercolor: #21273d;
+  --color-textcolor: #e2e3e6;
+  --color-textsecondarycolor: #8daac6;
+  --color-bgcolor: #f6f6f6;
+  --color-successone: #54ca68;
+  --color-successtwo: #fc544b;
+  --color-oddcolor: #1b2138;
+  --color-evencolor: #272e48;
+  --color-successthree: #3abaf4;
+  --color-hovertext: #5949d6;
+  --radius-card: 8px;
+  --radius-button: 8px;
+  --spacing-card: 10px;
+  --spacing-primary: 10px;
+}
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

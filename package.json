@@ -12,7 +12,10 @@
   "dependencies": {
     "@heroui/card": "^2.2.15",
     "@heroui/form": "^2.1.16",
+    "@heroui/navbar": "^2.2.15",
+    "@heroui/react": "^2.7.6",
     "@hookform/resolvers": "^5.0.1",
+    "@nextui-org/react": "^2.6.11",
     "@radix-ui/react-dialog": "^1.1.7",
     "@radix-ui/react-label": "^2.1.2",
     "@radix-ui/react-navigation-menu": "^1.2.5",
