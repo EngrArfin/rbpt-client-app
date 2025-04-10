@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import header1 from "../../../assets/images/header1.jpg";
 import header2 from "../../../assets/images/header2.jpg";
 import header3 from "../../../assets/images/header3.jpg";
-import header4 from "../../../assets/images/header4.jpg";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -14,16 +13,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const images = [
-  header1,
-  header2,
-  header3,
-  header4,
-  header1,
-  header2,
-  header3,
-  header4,
-];
+const images = [header1, header2, header3, header1, header2, header3];
 
 export function Carosel() {
   const [currentIndex, setCurrentIndex] = useState(0);
