@@ -1,3 +1,18 @@
+const Service = () => {
+  return (
+    <div className="min-h-screen items-center">
+      <h1 className="text-4xl flex justify-center items-center text-red-600">
+        Our Services
+      </h1>
+      <div>
+        <div></div>
+      </div>
+    </div>
+  );
+};
+
+export default Service;
+/* 
 import { add } from "@/redux/features/counterSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "../ui/button";
@@ -23,3 +38,4 @@ const Service = () => {
 };
 
 export default Service;
+ */
