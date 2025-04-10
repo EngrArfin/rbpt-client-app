@@ -1,27 +1,3 @@
-/* import { Bell } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-
-export function DashboardHeader() {
-  return (
-    <header className="flex justify-between items-center h-16 gap-4 border-b px-6">
-      <div className="p-6">
-      
-      </div>
-
-      <div className="flex items-center justify-endh-16 gap-4  px-6">
-        <Button variant="ghost" size="icon">
-          <Bell className="h-5 w-5" />
-        </Button>
-        <div className="flex items-center gap-3">
-          <div className="relative h-8 w-8 overflow-hidden rounded-full">
-           
-        </div>
-      </div>
-    </header>
-  );
-}
- */
 import {
   Navbar,
   NavbarContent,
@@ -33,14 +9,12 @@ import {
   Avatar,
 } from "@heroui/react";
 
-// Removed duplicate definition of SearchIconProps
-
 type SearchIconProps = {
   size?: number;
   strokeWidth?: number;
   width?: number;
   height?: number;
-  [x: string]: any; // Allow additional props
+  [x: string]: any;
 };
 
 const SearchIcon = ({
@@ -83,20 +57,27 @@ export default function App() {
     <Navbar isBordered>
       <NavbarContent justify="start"></NavbarContent>
 
-      <NavbarContent as="div" className="items-center" justify="end">
+      <NavbarContent as="div" className="items-center mt-2 mb-2" justify="end">
         <Input
           classNames={{
-            base: "max-w-full sm:max-w-[10rem] h-10",
+            base: "max-w-full sm:max-w-[18rem] h-12",
             mainWrapper: "h-full",
-            input: "text-small",
+            input:
+              "text-base text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500",
             inputWrapper:
-              "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
+              "h-full bg-white/30 dark:bg-gray-700/30 backdrop-blur-md border border-gray-300 dark:border-gray-600 rounded-full px-4 shadow-md hover:shadow-lg focus-within:ring-2 focus-within:ring-primary transition-all duration-300 ease-in-out",
           }}
-          placeholder="Type to search..."
+          placeholder="Search products, orders, customers..."
           size="sm"
-          startContent={<SearchIcon size={18} />}
+          startContent={
+            <SearchIcon
+              size={20}
+              className="text-gray-600 dark:text-gray-300"
+            />
+          }
           type="search"
         />
+
         <Dropdown placement="bottom-end">
           <DropdownTrigger>
             <Avatar
@@ -109,7 +90,11 @@ export default function App() {
               src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
             />
           </DropdownTrigger>
-          <DropdownMenu aria-label="Profile Actions" variant="flat">
+          <DropdownMenu
+            aria-label="Profile Actions"
+            variant="flat"
+            className="bg-gray-600 p-3 rounded-lg shadow-lg text-white"
+          >
             <DropdownItem key="profile" className="h-14 gap-2">
               <p className="font-semibold">Signed in as</p>
               <p className="font-semibold">zoey@example.com</p>
