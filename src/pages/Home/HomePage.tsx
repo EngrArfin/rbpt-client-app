@@ -1,4 +1,3 @@
-import { Carosel } from "@/components/Home/Header/Carosel";
 import { Home } from "@/components/Home/Home";
 import Service from "@/components/Home/Service";
 
@@ -7,7 +6,6 @@ const HomePage = () => {
     <div>
       <Home />
       <Service />
-      <Carosel />
     </div>
   );
 };

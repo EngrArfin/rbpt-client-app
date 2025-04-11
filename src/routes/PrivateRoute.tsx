@@ -9,5 +9,4 @@ const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
   );
   return isAuthenticated ? children : <Navigate to="/login" />;
 };
-
 export default PrivateRoute;

@@ -57,6 +57,9 @@ const NavBar: React.FC = () => {
           <Link to="/docs" className="hover:text-gray-300">
             Documentation
           </Link>
+          <Link to="/contact" className="block hover:text-gray-300">
+            Contact
+          </Link>
         </div>
 
         {/* Search & Actions */}
@@ -110,6 +113,9 @@ const NavBar: React.FC = () => {
           <DropdownMenu title="Components" items={components} mobile />
           <Link to="/docs" className="block hover:text-gray-300">
             Documentation
+          </Link>
+          <Link to="/contact" className="block hover:text-gray-300">
+            Contact
           </Link>
           <input
             type="text"

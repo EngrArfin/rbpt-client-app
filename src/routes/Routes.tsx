@@ -1,12 +1,11 @@
 import { DashboardContent } from "@/components/Admin/AdminSideBar/DashboardContent";
 import ForgotPassword from "@/components/Home/ForgetPassword";
-import { Home } from "@/components/Home/Home";
 import Login from "@/components/Home/Login";
-
 import Signup from "@/components/Home/Signup";
 import AdminLayout from "@/layout/AdminLayout";
 import Main from "@/layout/Main";
 import UserLayout from "@/layout/UserLayout";
+import ContactPage from "@/pages/Home/ContactPage";
 import HomePage from "@/pages/Home/HomePage";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -27,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />,
       },
       {
         path: "/signup",

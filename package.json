@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@heroui/card": "^2.2.15",
+    "@heroui/card": "^2.2.16",
     "@heroui/form": "^2.1.16",
     "@heroui/navbar": "^2.2.15",
     "@heroui/react": "^2.7.6",
