@@ -1,6 +1,77 @@
-import type React from "react";
+import { Calendar, Home, Inbox, LogOut, Search, Settings } from "lucide-react";
 
 import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+} from "@/components/ui/sidebar";
+
+// Menu items.
+const items = [
+  {
+    title: "Home",
+    url: "#",
+    icon: Home,
+  },
+  {
+    title: "Inbox",
+    url: "#",
+    icon: Inbox,
+  },
+  {
+    title: "Calendar",
+    url: "#",
+    icon: Calendar,
+  },
+  {
+    title: "Search",
+    url: "#",
+    icon: Search,
+  },
+  {
+    title: "Settings",
+    url: "#",
+    icon: Settings,
+  },
+  {
+    title: "Logout",
+    url: "logout",
+    icon: LogOut,
+  },
+];
+
+export function AppSidebar() {
+  return (
+    <Sidebar>
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {items.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton asChild>
+                    <a href={item.url}>
+                      <item.icon />
+                      <span>{item.title}</span>
+                    </a>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+    </Sidebar>
+  );
+}
+
+/* import {
   BarChart3,
   Calendar,
   FolderOpen,
@@ -62,20 +133,6 @@ const navItems: NavItem[] = [
 export function DashboardSidebar() {
   return (
     <aside className="flex w-96 flex-col border-r bg-white px-12">
-      {/* <div className="flex flex-col items-center border-y py-6">
-        <div className="relative h-20 w-20 overflow-hidden rounded-full">
-          <img
-            src="https://lh3.googleusercontent.com/a/ACg8ocJYO2z0aV3cT15IeV9_txuD04rcmJOVffuQD2WhH9OHs75WOyk=s288-c-no"
-            alt="Profile picture"
-            width={80}
-            height={80}
-            className="object-cover"
-          />
-        </div>
-        <h2 className="mt-4 font-semibold">EMMANUEL NONYE</h2>
-        <p className="text-sm text-[#1B8D1B]">Developer (Certified)</p>
-      </div> */}
-
       <nav className="flex-1 space-y-1 p-4">
         {navItems.map((item) => (
           <Link
@@ -105,3 +162,4 @@ export function DashboardSidebar() {
     </aside>
   );
 }
+ */

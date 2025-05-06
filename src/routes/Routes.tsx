@@ -1,14 +1,14 @@
+import { DashboardContent } from "@/components/Admin/AdminSideBar/DashboardContent";
 import ForgotPassword from "@/components/Home/ForgetPassword";
-import { Home } from "@/components/Home/Home";
 import Login from "@/components/Home/Login";
-
+import ProductDataApi from "@/components/Home/Product/ProductDataApi";
+import RocketDetails from "@/components/Home/Product/RocketDetails";
 import Signup from "@/components/Home/Signup";
 import AdminLayout from "@/layout/AdminLayout";
 import Main from "@/layout/Main";
 import UserLayout from "@/layout/UserLayout";
-import AdminDashboard from "@/pages/Admin/AdminDashboardPage";
-import AboutUsPage from "@/pages/Home/AboutUsPage";
-import Dashboard from "@/pages/User/Dashboard";
+import ContactPage from "@/pages/Home/ContactPage";
+import HomePage from "@/pages/Home/HomePage";
 import { createBrowserRouter } from "react-router-dom";
 
 export const router = createBrowserRouter([
@@ -18,16 +18,28 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        path: "/",
-        element: <Home />,
+        element: <HomePage />,
       },
-      {
+
+      /*  {
         path: "/about",
         element: <AboutUsPage />,
-      },
+      }, */
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />,
+      },
+      {
+        path: "/products",
+        element: <ProductDataApi />,
+      },
+      {
+        path: "/rockets/:rocketId",
+        element: <RocketDetails />,
       },
       {
         path: "/signup",
@@ -45,8 +57,12 @@ export const router = createBrowserRouter([
     element: <UserLayout></UserLayout> /*  <PrivateRoute> </PrivateRoute> */,
     children: [
       {
+        index: true,
+        element: <DashboardContent></DashboardContent>,
+      },
+      {
         path: "userhome",
-        element: <Dashboard></Dashboard>,
+        element: <DashboardContent></DashboardContent>,
       },
     ],
   },
@@ -56,8 +72,12 @@ export const router = createBrowserRouter([
     element: <AdminLayout></AdminLayout> /*  <PrivateRoute> </PrivateRoute> */,
     children: [
       {
+        index: true,
+        element: <DashboardContent></DashboardContent>,
+      },
+      {
         path: "admindashboard",
-        element: <AdminDashboard></AdminDashboard>,
+        element: <DashboardContent></DashboardContent>,
       },
     ],
   },

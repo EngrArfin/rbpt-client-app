@@ -1,4 +1,4 @@
-const UserHeader = () => {
+/* const UserHeader = () => {
   return (
     <div className="border-y py-6 px-16">
       <div className="flex items-center gap-4">
@@ -20,4 +20,4 @@ const UserHeader = () => {
   );
 };
 
-export default UserHeader;
+export default UserHeader; */
