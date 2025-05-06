@@ -14,7 +14,7 @@ const AboutUs = () => {
           customer service, and a seamless shopping experience.
         </p>
       </section>
-
+      0.
       <section className="grid md:grid-cols-2 gap-10 mb-14">
         <div>
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">
@@ -39,7 +39,6 @@ const AboutUs = () => {
           </p>
         </div>
       </section>
-
       <section className="mb-14">
         <h2 className="text-2xl font-semibold mb-4 text-gray-800 text-center">
           Why Choose Us?
@@ -53,14 +52,12 @@ const AboutUs = () => {
           <li>Eco-friendly packaging and operations</li>
         </ul>
       </section>
-
       <section className="text-center mb-14">
         <h2 className="text-2xl font-semibold mb-6 text-gray-800">
           Our Achievements
         </h2>
         <Counter />
       </section>
-
       <section className="text-center">
         <h2 className="text-xl font-semibold mb-2 text-gray-800">
           Thank You for Being Part of Our Journey

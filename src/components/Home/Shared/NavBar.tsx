@@ -8,6 +8,7 @@ import {
   FaLock,
 } from "react-icons/fa";
 import logo from "../../../assets/icons/logo.png";
+import Wrapper from "./Wraper";
 
 interface NavItem {
   title: string;
@@ -45,7 +46,7 @@ const NavBar: React.FC = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <img src={logo} alt="Logo" className="h-10 w-10" />
-          <span className="text-xl font-bold tracking-tight">MyApp</span>
+          <span className="text-xl font-bold tracking-tight">Space X</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -59,6 +60,9 @@ const NavBar: React.FC = () => {
           </Link>
           <Link to="/contact" className="block hover:text-gray-300">
             Contact
+          </Link>
+          <Link to="/products" className="block hover:text-gray-300">
+            Products
           </Link>
         </div>
 
@@ -169,23 +173,27 @@ const DropdownMenu: React.FC<{
   }
 
   return (
-    <div className="relative group">
-      <button className="hover:text-gray-300 transition-colors">{title}</button>
-      <div className="absolute hidden group-hover:block bg-white text-black rounded-md shadow-lg mt-2 w-56 z-50">
-        {items.map((item) => (
-          <Link
-            to={item.href}
-            key={item.title}
-            className="block p-3 border-b last:border-0 hover:bg-gray-100"
-          >
-            <p className="font-medium">{item.title}</p>
-            {item.description && (
-              <p className="text-sm text-gray-500">{item.description}</p>
-            )}
-          </Link>
-        ))}
+    <Wrapper>
+      <div className="relative group">
+        <button className="hover:text-gray-300 transition-colors">
+          {title}
+        </button>
+        <div className="absolute hidden group-hover:block bg-white text-black rounded-md shadow-lg mt-2 w-56 z-50">
+          {items.map((item) => (
+            <Link
+              to={item.href}
+              key={item.title}
+              className="block p-3 border-b last:border-0 hover:bg-gray-100"
+            >
+              <p className="font-medium">{item.title}</p>
+              {item.description && (
+                <p className="text-sm text-gray-500">{item.description}</p>
+              )}
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </Wrapper>
   );
 };
 

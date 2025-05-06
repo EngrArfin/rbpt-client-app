@@ -1,6 +1,8 @@
 import { DashboardContent } from "@/components/Admin/AdminSideBar/DashboardContent";
 import ForgotPassword from "@/components/Home/ForgetPassword";
 import Login from "@/components/Home/Login";
+import ProductDataApi from "@/components/Home/Product/ProductDataApi";
+import RocketDetails from "@/components/Home/Product/RocketDetails";
 import Signup from "@/components/Home/Signup";
 import AdminLayout from "@/layout/AdminLayout";
 import Main from "@/layout/Main";
@@ -30,6 +32,14 @@ export const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactPage />,
+      },
+      {
+        path: "/products",
+        element: <ProductDataApi />,
+      },
+      {
+        path: "/rockets/:rocketId",
+        element: <RocketDetails />,
       },
       {
         path: "/signup",
